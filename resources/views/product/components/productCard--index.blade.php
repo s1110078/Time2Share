@@ -5,7 +5,12 @@
                 <h2 class="gridCard__heading"> {{$product->name}} </h2>
             </header>
             <figure class="gridCard__figure">
-                <img class="gridCard__image" src="{{$product->image}}" alt="{{$product->name . ' ' . $product->category}}" />
+                <img class="gridCard__image" 
+                    srcset="{{$product->image}} 480w,
+                            {{$product->image}} 800w"
+                    sizes="(max-width: 600px) 480px, 800px"
+                    src="{{$product->image}}"
+                    alt="{{$product->name . ' ' . $product->category}}" />
             </figure>
             <section class="gridCard__textSection u-flex-v-center">
                 <p class="gridCard__text"> {{$product->description}} </p>

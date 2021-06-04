@@ -1,7 +1,12 @@
 <article class="itemCard a-popup">
     <h2 class="itemCard__header"> {{$product->name}} </h2>
     <figure class="itemCard__figure">
-        <img class="itemCard__image" src="{{$product->image}}" alt="{{$product->name}}" />
+        <img class="itemCard__image" 
+            srcset="{{$product->image}} 480w,
+                    {{$product->image}} 800w"
+            sizes="(max-width: 600px) 480px, 800px"
+            src="{{$product->image}}"
+            alt="{{$product->name}}"/>
     </figure>
     <section class="itemCard__text">
         <p class="itemCard__text__description section_divider"> {{$product->description}} </p>
