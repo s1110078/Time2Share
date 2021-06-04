@@ -30,10 +30,27 @@ class ProductController extends Controller
         ]);
     }
 
+    public function dashboard(){
+        return view('dashboard', [
+            'product' => \App\Models\Product::all(),
+            'borrowedProfile' => \App\Models\Profiles::all(),
+        ]);
+    }
+
+    public function delete($id){
+        $product = \App\Models\Product::find($id);
+        $product->delete(); 
+        return redirect('/dashboard');
+    }
+
     public function store(Request $request, \App\Models\Product $product){
         $product->name = $request->input('name');
-        $product->borrowed = $request->input('borrowed');
-        
+        $product->category = $request->input('category');
+        $product->description = $request->input('description');
+        $product->image = $request->input('image');
+        $product->user_id = $request->input('user_id');
+        $product->borrowed = $request->input('null');
+
         try{
             $product->save();
             return redirect('/');

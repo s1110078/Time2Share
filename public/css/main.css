@@ -510,6 +510,14 @@ button:hover{
     color: black;
 }
 
+.red_bg{
+    background-color: #eb2b2b;
+}
+
+.blue_bg{
+    background-color: rgb(48, 145, 184);
+}
+
 .section_divider{
     border-bottom: solid #eeeeee 0.2rem;
 }
@@ -527,4 +535,8 @@ button:hover{
 
 .hide_element{
     display: none;
+}
+
+.bold_font{
+    font-weight: 500;
 }

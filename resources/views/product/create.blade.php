@@ -10,9 +10,12 @@ Creeer Product
 
 @section('content')
 
-<article class="create-form a-popup">
+<article class="create-form a-popup u-grid-margin blue_bg">
     <form class="create-form__form" action="/product" method="POST">
         @csrf
+        <section class="create-form__section">
+            <h2> Add a new product </h2>
+        </section>
 
         <section class="create-form__section">
             <label for="name"> Name </label>
@@ -40,6 +43,11 @@ Creeer Product
                     <option value="{{$image->image}}"> {{$image->image}} </option>
                 @endforeach
             </select>
+        </section>
+
+        <section class="create-form__section hide_element">
+            <label for="user_id"> user_id </label>
+            <input class="create-form__input" name="user_id" id="user_id" type="number" value="1"/>
         </section>
 
         <section class="create-form__section">

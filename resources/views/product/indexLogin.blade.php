@@ -5,7 +5,7 @@
 @endsection
 
 @section('topbar')
-    @include('components.topbar--index')
+    @include('components.topbarLogin--index')
 @endsection
 
 @section('homepage')

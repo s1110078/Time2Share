@@ -14,18 +14,11 @@
         @endif
     @endforeach
     <section class="itemCard__btnSection">
-        
-        <!--<a class="itemCard__link__review" href="#"> 
-            <button class="itemCard__btnSection__review"> 
-                <p> Borrow </p> 
-            </button> 
-        </a>-->
-        
+
         <a class="itemCard__link__review" href="#"> 
-            <button class="itemCard__btnSection__review" name="borrowed" value="{{$profiles->id}}" type="submit"> Borrow product </button>
+            <button class="itemCard__btnSection__review" name="borrowed" value="{{ Auth::user()->id }}" type="submit"> Borrow product </button>
         </a>
         
-
         <a class="itemCard__link__back_to_home" href="/product/{{$product->id}}">
             <button class="itemCard__button__back_to_home">
                 <p> Back </p>

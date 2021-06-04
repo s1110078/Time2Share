@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+
+}
+
+/* Dashboard stuff */
+
+.dashboard_card{
+    grid-column: span 4;
+    width: 100%;
+    height: 8rem;
+    padding-top: 1rem;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+    background-color: rgb(48, 145, 184);
+}
+
+@media(max-width: 56.25rem){
+    .dashboard_card{
+        grid-column: span 6;
+    }
+}
+
+@media(max-width: 32.5rem){
+    .dashboard_card{
+        grid-column: span 12;
+    }
+}
+
+.dashboard_card > a{
+    text-decoration: none;
+
+}
+
+.dashboard_card > a > article{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard_card > article{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard_card_header{
+    width: 100%;
+    height: 20%;
+}
+
+.dashboard_card_heading{
+    padding-left: 4rem;
+    color: #eeeeee;
+}
+
+.dashboard_card_textSection{
+    width: 100%;
+    height: 100%;
+    padding-left: 75%;
+    margin-top: -2rem;
+    padding-top: 1.5rem;
+}
+
+.dashboard_card_textSection_button{
+    height: 4rem;
+    width: 8rem;
+    font-size: 120%;
+    box-sizing: border-box;
+    background: #e21313;
+    border: none;
+    color: #eeeeee;
+    transition: 0.2s all;
+}
+
+
+
+.dashboard_card__text{
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.admin_dashboard{
+    width: 100%;
+    display: block;
+    
+}
+
+.admin_dashboard_title{
+    margin-top: 10rem;
+    margin-bottom: -5rem;
+}
+
+.admin_dashboard_title_header{
+    font-size: 300%;
+    font-weight: 1200;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Utility classes */
+.u-list-style-none{
+    list-style: none;
+}
+
+.dashboard_card_grid{
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0,1fr));
+}
+
+.dashboard_card_gap{
+    gap: 2rem;
+}
+
+.dashboard_card_center{
+    display: flex;
+    align-items: left;
+}
+
+.dashboard_card_margin{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.black_font{
+    color: black;
+}
+
+.red_bg{
+    background-color: #eb2b2b;
+}
+
+.blue_bg{
+    background-color: rgb(48, 145, 184);
+}
+
+.section_divider{
+    border-bottom: solid #eeeeee 0.2rem;
+}
+
+.mini_card{
+    margin: 2rem;
+    padding-bottom: 6rem;
+    box-shadow: 0 0.5rem 0.5rem black;
+    background-color: #086788;
+}
+
+.remove_vh{
+    height: 100%;
+}
+
+.hide_element{
+    display: none;
+}
+
+.bold_font{
+    font-weight: 500;
+}
+
+
+/* Admin */
+.top_nav_bar{
+    width: 100%;
+
+}
+
+.top_nav_bar > a{
+    text-decoration: none;
+}
+
+.top_nav_bar{
+    color: white;
+
+    max-width: 100%;
+    height: 5rem;
+    list-style: none;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+}
+
+.top_nav_bar_items{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.top_nav_bar_items li{
+    color: #eeeeee;
+    padding-top: 1rem;
+    padding-left: 4rem;
+}

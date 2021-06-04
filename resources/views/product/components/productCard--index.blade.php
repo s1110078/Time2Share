@@ -1,4 +1,4 @@
-<li class="a-popup u-list-style-none gridCard" data-category={{$product->category}}>
+<li class="a-popup u-list-style-none gridCard" data-name="{{$product->name}}" data-category="{{$product->category}}">
     <a href="/product/{{$product->id}}">
         <article>
             <header class="gridCard__header u-flex-v-center">

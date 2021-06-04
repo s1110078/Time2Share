@@ -41,4 +41,12 @@ class ProfilesController extends Controller
             'images' => \App\Models\Image::all(),
         ]);
     }
+
+    public function account($id){
+        return view('account', [
+            'profiles' => \App\Models\Profiles::find($id),
+            'product' => \App\Models\Product::all(),
+        ]);
+    }
+
 }

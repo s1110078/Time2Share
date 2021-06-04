@@ -1,17 +1,38 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <section class="admin_dashboard">
+        <article class="admin_dashboard_title">
+            <h2 class="admin_dashboard_title_header"> Overview of all products </h>
+        </article>
+    </section>    
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <ul class="dashboard_card_grid dashboard_card_gap dashboard_card_margin">
+        @foreach($product as $product)
+        <li class="u-list-style-none dashboard_card" data-name="{{$product->name}}" data-category="{{$product->category}}">
+            <article>
+                <header class="dashboard_card_header dashboard_card_center">
+                    <h2 class="dashboard_card_heading"> {{$product->name}} 
+                    <br> Owned by: 
+                        @foreach($borrowedProfile as $profile)
+                            @if($product->user_id == $profile->id)
+                                {{$profile->name}}
+                            @endif
+                        @endforeach
+                    </h2>
+                </header>
+                
+                <section class="dashboard_card_textSection dashboard_card_center">
+                    <a href="/dashboard/{{$product->id}}"> <button class="dashboard_card_textSection_button"> Delete </button> </a>
+                </section>
+            </article>
+        </li>
+        @endforeach
+    </lu>
+
+
+
+
+    <link rel="stylesheet" href="/css/utility.css">
+
 </x-app-layout>
+
